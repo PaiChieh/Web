@@ -20,8 +20,9 @@ function handleDownload() {
     window.location.href = iosUrl; 
 
   // 判断Android  
-  }else if(ua.match(/\(Linux; U; Android/)){
+  }else if(ua.match(/\(Linux; U; /Android/i)){
     window.location.href = androidUrl; 
+    window.open(url, '_system');
   }  
 } 
 
