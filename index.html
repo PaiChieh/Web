@@ -8,7 +8,7 @@
 <body>
 
 <!-- 定制化Tweet按鈕 -->
-<a href="#" id="tweet-btn">Tweet</a>  
+<!-- <a href="#" id="tweet-btn">Tweet</a>  
 
 <script type="text/javascript">
   // 定制化Tweet內容
@@ -28,15 +28,15 @@
     event.preventDefault();
     window.twttr.widgets.createTweet(tweet, document.getElementById('tweet-btn'));
   });
-</script>
+</script> -->
 
 <!-- 系统判斷跳轉鏈接 -->  
-<!-- <a href="#" id="download-btn">下載App</a>
+<a href="#" id="download-btn">下載App</a>
 
 <script type="text/javascript">
   // iOS和Android下載鏈接
-  const iosUrl = "http://"; 
-  const androidUrl = "http://";
+  const iosUrl = "https://apps.apple.com/jp/app/たまごタイクーン/id6473332404"; 
+  const androidUrl = "https://play.google.com/store/apps/details?id=com.app.eggtycoon";
 
   // User Agent信息
   const ua = navigator.userAgent;
@@ -50,7 +50,7 @@
         window.location.href = androidUrl;
     }
   });  
-</script> -->
+</script>
 
 </body>
 </html>
