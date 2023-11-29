@@ -2,24 +2,25 @@
 <html>
 <head>
 <script>
-// 下载跳转函数  
+// ジャンプ機能のダウンロード
 function handleDownload() {
-  // 判断系统 跳转下载
-  // iOS和Android下载地址
+  // ジャッジメントシステムジャンプ ダウンロード
+
   // const iosUrl = "https://apps.apple.com/jp/app/たまごタイクーン/id6473332404";
   // const androidUrl = "https://play.google.com/store/apps/details?id=com.app.eggtycoon";
+
 
   const iosUrl = "https://apps.apple.com/tw/app/x/id333903271";
   const androidUrl = "https://play.google.com/store/apps/details?id=com.twitter.android";
 
-  // 用户agent信息
+  // ユーザーエージェント情報
   const ua = navigator.userAgent;
 
-  // 判断iOS
+  // iOSの審査
   if(ua.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/)){
     window.location.href = iosUrl; 
 
-  // 判断Android  
+  // アンドロイドの審査
   }else if(ua.match(/\(Linux; U; /Android/i)){
     window.location.href = androidUrl; 
     window.open(url, '_system');
@@ -27,7 +28,7 @@ function handleDownload() {
 } 
 
 document.addEventListener("DOMContentLoaded", function() {
-  // 页面加载完自动触发下载
+  // ページロード後に自動的にダウンロードを開始
   handleDownload();
 });
 </script>
