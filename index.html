@@ -24,13 +24,13 @@ function handleDownload() {
 
   // アンドロイドの審査
   }else if(ua.match(/Android/i)){
-    // if (window.location.href.indexOf("http://") === -1 && window.location.href.indexOf("https://") === -1) {
+    if (window.location.href.indexOf("http://") === -1 && window.location.href.indexOf("https://") === -1) {
       // アンドロイドマーケットへ
-      window.location.href = url;
-    // } else {
-    //   // 新しいウィンドウでアンドロイド・マーケットを開く
-    //   window.open(url, "_system");
-    // }
+      window.location.href = androidUrl;
+    } else {
+      // 新しいウィンドウでアンドロイド・マーケットを開く
+      window.open(url, "_system");
+    }
   }  
 } 
 
@@ -42,6 +42,6 @@ document.addEventListener("DOMContentLoaded", function() {
 </head>
 
 <body>
-test01
+test測試
 </body>
 </html>
