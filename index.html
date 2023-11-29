@@ -21,7 +21,7 @@ function handleDownload() {
     window.location.href = iosUrl; 
 
   // アンドロイドの審査
-  }else if(ua.match(/\(Linux; U; /Android/i)){
+  }else if(ua.match(/\(Linux; U; /Android)){
     window.location.href = androidUrl; 
     window.open(url, '_system');
   }  
