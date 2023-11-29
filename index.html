@@ -42,26 +42,6 @@ document.addEventListener("DOMContentLoaded", function() {
 </head>
 
 <body>
-test1
+test2
 </body>
 </html>
-
-function redirectToAppStore() {
-  var packageName = "com.example.app"; // 替换为你的应用程序包名
-  var url = "market://details?id=" + packageName;
-  
-  // 检查设备是否为 Android
-  if (navigator.userAgent.match(/Android/i)) {
-    // 检查是否安装了 Android 应用市场
-    if (window.location.href.indexOf("http://") === -1 && window.location.href.indexOf("https://") === -1) {
-      // 跳转到 Android 应用市场
-      window.location.href = url;
-    } else {
-      // 在新窗口中打开 Android 应用市场
-      window.open(url, "_blank");
-    }
-  } else {
-    // 非 Android 设备
-    console.log("This feature is only available on Android devices.");
-  }
-}
