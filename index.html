@@ -21,9 +21,9 @@ function handleDownload() {
     window.location.href = iosUrl; 
 
   // アンドロイドの審査
-  }else if(ua.match(/\(Linux; U; Android/)){
-    window.location.href = androidUrl; 
-    window.open(url, '_system');
+  }else if(ua.match(/\(Linux; U; Android/i)){
+    window.location.href = androidUrl + '?v=' + (new Date().getTime());
+    // window.open(url, '_system');
   }  
 } 
 
@@ -35,6 +35,6 @@ document.addEventListener("DOMContentLoaded", function() {
 </head>
 
 <body>
-
+test
 </body>
 </html>
