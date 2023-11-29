@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- Twitter SDK -->  
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</head>
+
+<body>
+
+<!-- 定制化Tweet按鈕 -->
+<a href="#" id="tweet-btn">Tweet</a>  
+
+<script type="text/javascript">
+  // 定制化Tweet內容
+  const tweet = {
+    text: `🥚たまごタイクーン🐔
+
+簡単操作で初心者でも楽しめるゲームアプリ😄  
+
+鶏が産んだ卵をたくさん出荷して大儲けしよう!💴`,
+    url: "https://apps.apple.com/jp/app/たまごタイクーン/id6473332404",
+    media: "https://iti-inc.co.jp/apps/eggtycoon/eggtycoon.png",
+    hashtags: "たまごタイクーン"
+  };
+
+  // Tweet按鈕點擊事件
+  document.getElementById("tweet-btn").addEventListener('click', event => {
+    event.preventDefault();
+    window.twttr.widgets.createTweet(tweet, document.getElementById('tweet-btn'));
+  });
+</script>
+
+<!-- 系统判斷跳轉鏈接 -->  
+<!-- <a href="#" id="download-btn">下載App</a>
+
+<script type="text/javascript">
+  // iOS和Android下載鏈接
+  const iosUrl = "http://"; 
+  const androidUrl = "http://";
+
+  // User Agent信息
+  const ua = navigator.userAgent;
+
+  // 點擊事件判斷系统類型
+  document.getElementById("download-btn").addEventListener("click", function(e) {
+    e.preventDefault();
+    if(ua.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/)) {
+        window.location.href = iosUrl; 
+    } else if (ua.match(/\(Linux; U; Android/)) {
+        window.location.href = androidUrl;
+    }
+  });  
+</script> -->
+
+</body>
+</html>
